@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 /// A customizable pagination widget for Flutter that displays page
 /// buttons, navigation controls, and optional "rows per page" dropdown.
-/// 
+///
 /// Supports responsive layouts for mobile, tablet, and desktop.
 class PaginationPlus extends StatelessWidget {
   /// The current active page index (zero-based).dart pub upgrade --major-versions flutter_lints
