@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pagination_plus/flutter_pagination.dart';
+import 'package:pagination_plus/pagination_plus.dart';
 
 void main() {
   testWidgets('Pagination buttons render correctly',
