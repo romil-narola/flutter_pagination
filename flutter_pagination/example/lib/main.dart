@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pagination/flutter_pagination.dart';
+import 'package:flutter_pagination_plus/flutter_pagination.dart';
+
 
 void main() {
   runApp(const Pagination());
