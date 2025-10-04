@@ -63,10 +63,10 @@ class PaginationPlus extends StatelessWidget {
     const Color tableDividerColor = Color(0xFFE0E0E0);
     const Color greyColor = Color(0xFFBABEC2);
 
-    final TextStyle smallGreyText =
-        Theme.of(context).textTheme.bodySmall!.copyWith(
-              color: const Color(0xFFBABEC2),
-            );
+    final TextStyle smallGreyText = TextStyle(
+      fontSize: 14,
+      color: Color(0xFF646464),
+    );
 
     int buttonCount = totalPages > 7 ? 7 : totalPages;
     int start = currentPageIndex - 3;
