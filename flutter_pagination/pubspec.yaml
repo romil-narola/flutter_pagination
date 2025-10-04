@@ -5,8 +5,8 @@ description: >
 version: 1.0.3
 
 # Links
-repository: https://github.com/romil-narola/flutter_pagination
 homepage: https://github.com/romil-narola/flutter_pagination
+repository: https://github.com/romil-narola/flutter_pagination
 
 # SDK version
 environment:
