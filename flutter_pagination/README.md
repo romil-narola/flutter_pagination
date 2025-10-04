@@ -1,16 +1,30 @@
-# flutter_pagination
+# Flutter Pagination
 
-A new Flutter project.
+[![pub package](https://img.shields.io/pub/v/flutter_pagination.svg)](https://pub.dev/packages/flutter_pagination)
+[![Flutter](https://img.shields.io/badge/flutter-3.10.0+-blue.svg)](https://flutter.dev)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-## Getting Started
+A **lightweight, responsive pagination widget** for Flutter apps, **supporting web, desktop, tablet, and mobile**.  
+Fully customizable page controls and rows per page with record range display.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## 🚀 Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Works on **Web, Desktop, Tablet, and Mobile**.
+- Responsive pagination layout.
+- Customizable **rows per page**.
+- Full **page navigation controls** (first, previous, next, last, numbered buttons).
+- Shows **record range** (e.g., `Showing 1 to 10 of 95 records`).
+- Lightweight and easy to integrate.
+- Works with any list, table, or grid.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## ⚡ Installation
+
+Add this to your `pubspec.yaml`:
+
+```yaml
+dependencies:
+  flutter_pagination: ^1.0.0
