@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:pagination_plus/pagination_plus.dart';
 
+/// Entry point of the Flutter app.
 void main() {
   runApp(const Pagination());
 }
 
+/// Example Flutter app demonstrating the usage of [PaginationPlus] widget.
 class Pagination extends StatefulWidget {
   const Pagination({super.key});
 
@@ -13,13 +15,21 @@ class Pagination extends StatefulWidget {
 }
 
 class _PaginationState extends State<Pagination> {
+  /// Current active page index (zero-based).
   int currentPage = 0;
+
+  /// Number of rows displayed per page.
   int rowsPerPage = 10;
 
   @override
   Widget build(BuildContext context) {
+    // Total number of items/records in the dataset.
     int totalRecords = 95;
+
+    // Calculate total pages based on rows per page.
     int totalPages = (totalRecords / rowsPerPage).ceil();
+
+    // Calculate start and end indices for the current page.
     int startIndex = (currentPage * rowsPerPage) + 1;
     int endIndex = ((currentPage + 1) * rowsPerPage);
     if (endIndex > totalRecords) endIndex = totalRecords;
@@ -29,6 +39,7 @@ class _PaginationState extends State<Pagination> {
         appBar: AppBar(title: const Text('Flutter Pagination Example')),
         body: Column(
           children: [
+            // Display current page items in a ListView.
             Expanded(
               child: ListView.builder(
                 itemCount: endIndex - startIndex + 1,
@@ -39,6 +50,8 @@ class _PaginationState extends State<Pagination> {
                 },
               ),
             ),
+
+            // PaginationPlus widget for navigating pages.
             PaginationPlus(
               currentPageIndex: currentPage,
               totalPages: totalPages,

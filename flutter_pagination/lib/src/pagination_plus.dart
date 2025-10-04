@@ -1,18 +1,46 @@
 import 'package:flutter/material.dart';
 
+/// A customizable pagination widget for Flutter that displays page
+/// buttons, navigation controls, and optional "rows per page" dropdown.
+/// 
+/// Supports responsive layouts for mobile, tablet, and desktop.
 class PaginationPlus extends StatelessWidget {
+  /// The current active page index (zero-based).dart pub upgrade --major-versions flutter_lints
   final int currentPageIndex;
+
+  /// Total number of pages available.
   final int totalPages;
+
+  /// Total number of records/items in the dataset.
   final int totalCount;
+
+  /// Number of rows displayed per page.
   final int rowsPerPage;
+
+  /// Index of the first item displayed on the current page (1-based).
   final int startIndex;
+
+  /// Index of the last item displayed on the current page (1-based).
   final int endIndex;
+
+  /// Flag to indicate if the layout is tablet-sized.
   final bool isTablet;
+
+  /// Flag to indicate if the layout is mobile-sized.
   final bool isMobile;
+
+  /// List of available rows-per-page options for the dropdown.
   final List<int> availableRowsPerPage;
+
+  /// Callback triggered when the page is changed.
   final ValueChanged<int> onPageChanged;
+
+  /// Callback triggered when the rows-per-page selection changes.
   final ValueChanged<int> onRowsPerPageChanged;
 
+  /// Creates a [PaginationPlus] widget.
+  ///
+  /// All parameters are required to properly render the pagination controls.
   const PaginationPlus({
     super.key,
     required this.currentPageIndex,
@@ -34,6 +62,7 @@ class PaginationPlus extends StatelessWidget {
     const Color secondaryColor = Color(0xFF704264);
     const Color tableDividerColor = Color(0xFFE0E0E0);
     const Color greyColor = Color(0xFFBABEC2);
+
     final TextStyle smallGreyText =
         Theme.of(context).textTheme.bodySmall!.copyWith(
               color: const Color(0xFFBABEC2),

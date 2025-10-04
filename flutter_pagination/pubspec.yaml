@@ -2,7 +2,7 @@ name: pagination_plus
 description: >
   A lightweight, responsive Flutter pagination widget with customizable rows, page controls, and support for desktop, tablet, and mobile.
 
-version: 1.0.2
+version: 1.0.3
 
 # Links
 repository: https://github.com/romil-narola/flutter_pagination
@@ -17,7 +17,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_lints: ^3.0.2
 
 # Development & testing dependencies
 dev_dependencies:
