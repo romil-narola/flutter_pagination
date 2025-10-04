@@ -40,7 +40,7 @@ class _PaginationState extends State<Pagination> {
                 },
               ),
             ),
-            CustomPagination(
+            PaginationPlus(
               currentPageIndex: currentPage,
               totalPages: totalPages,
               totalCount: totalRecords,

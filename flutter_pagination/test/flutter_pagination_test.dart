@@ -6,7 +6,7 @@ void main() {
   testWidgets('Pagination buttons render correctly',
       (WidgetTester tester) async {
     await tester.pumpWidget(MaterialApp(
-      home: CustomPagination(
+      home: PaginationPlus(
         currentPageIndex: 0,
         totalPages: 5,
         totalCount: 50,

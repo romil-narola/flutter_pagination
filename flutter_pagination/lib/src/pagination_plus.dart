@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CustomPagination extends StatelessWidget {
+class PaginationPlus extends StatelessWidget {
   final int currentPageIndex;
   final int totalPages;
   final int totalCount;
@@ -13,7 +13,7 @@ class CustomPagination extends StatelessWidget {
   final ValueChanged<int> onPageChanged;
   final ValueChanged<int> onRowsPerPageChanged;
 
-  const CustomPagination({
+  const PaginationPlus({
     super.key,
     required this.currentPageIndex,
     required this.totalPages,
@@ -30,12 +30,14 @@ class CustomPagination extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Color paginationColor = Colors.grey.shade200;
-    final Color secondaryColor = Colors.blue;
-    final Color tableDividerColor = Colors.grey.shade300;
-    final Color greyColor = Colors.grey;
+    const Color paginationColor = Color(0xFFF0F0F0);
+    const Color secondaryColor = Color(0xFF704264);
+    const Color tableDividerColor = Color(0xFFE0E0E0);
+    const Color greyColor = Color(0xFFBABEC2);
     final TextStyle smallGreyText =
-        Theme.of(context).textTheme.bodySmall!.copyWith(color: Colors.grey);
+        Theme.of(context).textTheme.bodySmall!.copyWith(
+              color: const Color(0xFFBABEC2),
+            );
 
     int buttonCount = totalPages > 7 ? 7 : totalPages;
     int start = currentPageIndex - 3;

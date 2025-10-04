@@ -1,3 +1,3 @@
 library flutter_pagination;
 
-export 'src/common_pagination.dart';
+export 'src/pagination_plus.dart';
