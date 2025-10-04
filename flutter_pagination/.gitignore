@@ -10,22 +10,24 @@
 .svn/
 migrate_working_dir/
 
-# IntelliJ related
+# IntelliJ / Android Studio
 *.iml
 *.ipr
 *.iws
 .idea/
 
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
+# VS Code
+.vscode/
 
 # Flutter/Dart/Pub related
-# Libraries should not include pubspec.lock, per https://dart.dev/guides/libraries/private-files#pubspeclock.
-/pubspec.lock
-**/doc/api/
+pubspec.lock
+build/
 .dart_tool/
 .flutter-plugins-dependencies
-/build/
-/coverage/
+coverage/
+.idea/
+*.iml
+.vscode/
+
+# Generated plugin registrant files (optional, if using plugins)
+**/generated_plugin_registrant.dart
