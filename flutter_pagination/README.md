@@ -27,4 +27,4 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  flutter_pagination: ^1.0.5
+  flutter_pagination: ^1.0.6

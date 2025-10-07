@@ -74,10 +74,10 @@ class PaginationPlus extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final TextStyle smallGreyText =
-        Theme.of(context).textTheme.bodySmall!.copyWith(
-              color: const Color(0xFFBABEC2),
-            );
+    final TextStyle smallGreyText = TextStyle(
+      fontSize: 16,
+      color: Color(0xFF646464),
+    );
 
     // Determine visible button range
     int buttonCount = totalPages > 7 ? 7 : totalPages;
