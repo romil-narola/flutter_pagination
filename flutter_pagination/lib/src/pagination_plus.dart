@@ -75,7 +75,7 @@ class PaginationPlus extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final TextStyle smallGreyText = TextStyle(
-      fontSize: 16,
+      fontSize: 14,
       color: Color(0xFF646464),
     );
 
