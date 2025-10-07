@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 ///
 /// Supports responsive layouts for mobile, tablet, and desktop.
 class PaginationPlus extends StatelessWidget {
-  /// The current active page index (zero-based).dart pub upgrade --major-versions flutter_lints
+  /// The current active page index (zero-based).
   final int currentPageIndex;
 
   /// Total number of pages available.
@@ -29,6 +29,18 @@ class PaginationPlus extends StatelessWidget {
   /// Flag to indicate if the layout is mobile-sized.
   final bool isMobile;
 
+  /// Background color for pagination container.
+  final Color paginationColor;
+
+  /// Primary accent color (for selected buttons, highlights, etc.).
+  final Color secondaryColor;
+
+  /// Divider color for table and pagination borders.
+  final Color tableDividerColor;
+
+  /// Neutral grey color for borders and dropdown outlines.
+  final Color greyColor;
+
   /// List of available rows-per-page options for the dropdown.
   final List<int> availableRowsPerPage;
 
@@ -49,6 +61,10 @@ class PaginationPlus extends StatelessWidget {
     required this.rowsPerPage,
     required this.startIndex,
     required this.endIndex,
+    this.paginationColor = const Color(0xFFF0F0F0),
+    this.secondaryColor = const Color(0xFF704264),
+    this.tableDividerColor = const Color(0xFFE0E0E0),
+    this.greyColor = const Color(0xFFBABEC2),
     required this.availableRowsPerPage,
     required this.isTablet,
     required this.isMobile,
@@ -58,16 +74,12 @@ class PaginationPlus extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const Color paginationColor = Color(0xFFF0F0F0);
-    const Color secondaryColor = Color(0xFF704264);
-    const Color tableDividerColor = Color(0xFFE0E0E0);
-    const Color greyColor = Color(0xFFBABEC2);
+    final TextStyle smallGreyText =
+        Theme.of(context).textTheme.bodySmall!.copyWith(
+              color: const Color(0xFFBABEC2),
+            );
 
-    final TextStyle smallGreyText = TextStyle(
-      fontSize: 14,
-      color: Color(0xFF646464),
-    );
-
+    // Determine visible button range
     int buttonCount = totalPages > 7 ? 7 : totalPages;
     int start = currentPageIndex - 3;
     if (start < 0) start = 0;
@@ -170,9 +182,7 @@ class PaginationPlus extends StatelessWidget {
                         );
                       }).toList(),
                       onChanged: (value) {
-                        if (value != null) {
-                          onRowsPerPageChanged(value);
-                        }
+                        if (value != null) onRowsPerPageChanged(value);
                       },
                     ),
                   ),
