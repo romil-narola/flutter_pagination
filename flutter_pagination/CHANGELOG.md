@@ -1,15 +1,10 @@
 # Changelog
 
-## [1.0.7] - 2025-10-07
+## [1.0.8] - 2025-10-29
 
 ### Added
 
 - Initial release of `pagination_plus`.
-- Added customizable color parameters:
-  - `paginationColor`
-  - `secondaryColor`
-  - `tableDividerColor`
-  - `greyColor`
 - Responsive pagination widget supporting desktop, tablet, and mobile layouts.
 - Rows per page dropdown with adjustable options.
 - Page navigation with first, last, next, and previous controls.
