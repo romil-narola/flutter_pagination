@@ -165,7 +165,7 @@ class PaginationPlus extends StatelessWidget {
                           ? () => onPageChanged(totalPages - 1)
                           : null,
                     ),
-                    const SizedBox(width: 30),
+                    if (!isTablet && !isMobile) const SizedBox(width: 30),
                     if (!isTablet && !isMobile)
                       Text(
                         'Showing $startIndex to $endIndex of $totalCount records',

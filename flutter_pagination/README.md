@@ -27,4 +27,4 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  pagination_plus: ^1.0.10
+  pagination_plus: ^1.0.11
